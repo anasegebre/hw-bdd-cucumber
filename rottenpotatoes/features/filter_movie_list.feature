@@ -45,6 +45,6 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
    
 
 Scenario: all ratings selected
-  When I check the following ratings: "PG, R, G, PG-13"
+  When I check the following ratings: PG, R, G, PG-13
     And I press "ratings_submit"
-  Then I should see all of the movies
+  Then I should see all the movies

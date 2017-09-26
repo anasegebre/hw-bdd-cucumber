@@ -38,5 +38,5 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
 end
 
 Then /I should see all the movies/ do
-  page.should have_css("table#movies tbody tr",:count => value.to_i)
+  page.all("table#movies tbody tr").count.should == Movie.count
 end
